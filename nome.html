@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meu Portfólio</title>
+        <meta charset="utf-8">
+
+        <style>
+
+            body{
+                background-color: lightblue;
+                margin: 0;
+                padding: 0;
+                height: 200vh;
+            }
+
+            h1 {
+                font-family: 'Arial', sans-serif;  
+                font-size: 24px;                   
+                color: #6090c0;                  
+                text-align: center;        
+                margin-top: 150px;       
+            }
+    
+            p {
+                font-family: 'Arial', sans-serif;  
+                font-size: 18px;                  
+                color: #303e4c;                  
+                line-height: 1.6;                
+                text-align: center;            
+                margin: 10px 0;                 
+            }
+    
+            p:first-of-type {
+                font-weight: bold;                
+                color: #506b89;                   
+            }
+
+
+            button {
+               display: block;
+               width: 150px;
+               height: 50px;
+               margin: 20px auto;
+               font-size: 18px;
+               background-color: rgb(150, 150, 150);
+               color: rgb(9, 5, 5);
+               border: 1px solid black;
+               cursor: pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>WEB DEVELOPER</h1>
+        
+        <p>Olá, me chamo Mariana, muitos me apelidam de "Yoda" e sou uma programadora nova, começando na faculdade de Ciência da Computação à procura de aprimorar meus conhecimentos na área.</p>
+        <p>Estou aprendendo atualmente: C++, HTML, JavaScript e CSS.</p>
+        <p>Atualmente não trabalho em nenhum projeto, mas tenho um GitHub ativo com os trabalhos que performei na faculdade.</p>
+        
+        <button onclick="sobreLinguagens('JavaScript')">JavaScript</button>
+        <button onclick="sobreLinguagens('HTML')">HTML</button>
+        <button onclick="sobreLinguagens('C++')">C++</button>
+
+        <button style="width: 150px; height: 50px; font-size: 18px;" onclick="verGit()">Ver GitHub</button>
+        <button style="width: 150px; height: 50px; font-size: 18px;" onclick="verInsta()">Ver Instagram</button>
+
+        <div id="resultado"></div>
+
+        <script>
+            function verGit() {
+                window.open("https://github.com/yodinhabanana", "_blank"); 
+            }
+
+            function verInsta() {
+                window.open("https://www.instagram.com/marplucas/", "_blank");
+            }
+
+            function sobreLinguagens(linguagem) {
+                switch (linguagem) {
+                    case "C++":
+                        document.getElementById("resultado").innerHTML = `<h2>Possuo conhecimentos em ${linguagem} na parte de desenvolvimento de softwares e lógica de programação básica`;
+                        break;
+                    case "JavaScript":
+                        document.getElementById("resultado").innerHTML = `<h2>Possuo conhecimentos básicos em ${linguagem}</h2>`;
+                        break;
+                    case "HTML":
+                        document.getElementById("resultado").innerHTML = `<h2>Utilizo ${linguagem} para desenvolvimento WEB. </h2>`;
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
